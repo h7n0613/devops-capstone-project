@@ -54,10 +54,9 @@ class TestAccountService(TestCase):
         db.session.remove()
 
 
-    ######################################################################
-    #  H E L P E R   M E T H O D S
-    ######################################################################
-
+######################################################################
+#  H E L P E R   M E T H O D S
+######################################################################
     def _create_accounts(self, count):
         """Factory method to create accounts in bulk"""
         accounts = []
@@ -78,7 +77,6 @@ class TestAccountService(TestCase):
     ######################################################################
     #  A C C O U N T   T E S T   C A S E S
     ######################################################################
-
     def test_index(self):
         """It should get 200_OK from the Home Page"""
         response = self.client.get("/")
