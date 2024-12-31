@@ -53,6 +53,7 @@ class TestAccountService(TestCase):
         """Runs once after each test case"""
         db.session.remove()
 
+
     ######################################################################
     #  H E L P E R   M E T H O D S
     ######################################################################
@@ -72,6 +73,7 @@ class TestAccountService(TestCase):
             account.id = new_account["id"]
             accounts.append(account)
         return accounts
+
 
     ######################################################################
     #  A C C O U N T   T E S T   C A S E S
@@ -194,4 +196,3 @@ class TestAccountService(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         # Check for the CORS header
         self.assertEqual(response.headers.get('Access-Control-Allow-Origin'), '*')
-        
